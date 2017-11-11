@@ -1,2 +1,0 @@
-# TestScript
-TestScript for testing

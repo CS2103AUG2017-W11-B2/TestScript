@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="mobile-web-app-capable" content="yes">
+    <title>
+        Rolodex - Test Script - HackMD
+    </title>
+    <link rel="icon" type="image/png" href="https://hackmd.io/favicon.png">
+    <link rel="apple-touch-icon" href="https://hackmd.io/apple-touch-icon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha256-916EbMg70RQy9LHiGkXzG8hSg9EdNy97GazNG/aiY1w=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css" integrity="sha256-3iu9jgsy9TpTwXKb7bNQzqWekRX7pPK+2OLj3R922fo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/octicons/3.5.0/octicons.min.css" integrity="sha256-QiWfLIsCT02Sdwkogf6YMiQlj4NE84MKkzEMkZnMGdg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.1/themes/prism.min.css" integrity="sha256-vtR0hSWRc3Tb26iuN2oZHt3KRUomwTufNIf5/4oeCyg=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.7.0/styles/github-gist.min.css" integrity="sha256-tAflq+ymku3Khs+I/WcAneIlafYgDiOQ9stIHH985Wo=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojify.js/1.1.0/css/basic/emojify.min.css" integrity="sha256-UOrvMOsSDSrW6szVLe8ZDZezBxh5IoIfgTwdNDgTjiU=" crossorigin="anonymous" />
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300|Source+Serif+Pro|Source+Code+Pro:400,300,500&subset=latin,latin-ext);.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif;font-size:16px;line-height:1.5;word-wrap:break-word}.markdown-body:after,.markdown-body:before{display:table;content:""}.markdown-body:after{clear:both}.markdown-body>:first-child{margin-top:0!important}.markdown-body>:last-child{margin-bottom:0!important}.markdown-body a:not([href]){color:inherit;text-decoration:none}.markdown-body .absent{color:#c00}.markdown-body .anchor{float:left;padding-right:4px;margin-left:-20px;line-height:1}.markdown-body .anchor:focus{outline:none}.markdown-body blockquote,.markdown-body dl,.markdown-body ol,.markdown-body p,.markdown-body pre,.markdown-body table,.markdown-body ul{margin-top:0;margin-bottom:16px}.markdown-body hr{height:.25em;padding:0;margin:24px 0;background-color:#e7e7e7;border:0}.markdown-body blockquote{padding:0 1em;color:#777;border-left:.25em solid #ddd}.markdown-body blockquote>:first-child{margin-top:0}.markdown-body blockquote>:last-child{margin-bottom:0}.markdown-body .loweralpha{list-style-type:lower-alpha}.markdown-body h1,.markdown-body h2,.markdown-body h3,.markdown-body h4,.markdown-body h5,.markdown-body h6{margin-top:24px;margin-bottom:16px;font-weight:600;line-height:1.25}.markdown-body h1 .octicon-link,.markdown-body h2 .octicon-link,.markdown-body h3 .octicon-link,.markdown-body h4 .octicon-link,.markdown-body h5 .octicon-link,.markdown-body h6 .octicon-link{color:#000;vertical-align:middle;visibility:hidden}.markdown-body h1:hover .anchor,.markdown-body h2:hover .anchor,.markdown-body h3:hover .anchor,.markdown-body h4:hover .anchor,.markdown-body h5:hover .anchor,.markdown-body h6:hover .anchor{text-decoration:none}.markdown-body h1:hover .anchor .octicon-link,.markdown-body h2:hover .anchor .octicon-link,.markdown-body h3:hover .anchor .octicon-link,.markdown-body h4:hover .anchor .octicon-link,.markdown-body h5:hover .anchor .octicon-link,.markdown-body h6:hover .anchor .octicon-link{visibility:visible}.markdown-body h1 code,.markdown-body h1 tt,.markdown-body h2 code,.markdown-body h2 tt,.markdown-body h3 code,.markdown-body h3 tt,.markdown-body h4 code,.markdown-body h4 tt,.markdown-body h5 code,.markdown-body h5 tt,.markdown-body h6 code,.markdown-body h6 tt{font-size:inherit}.markdown-body h1{font-size:2em}.markdown-body h1,.markdown-body h2{padding-bottom:.3em;border-bottom:1px solid #eee}.markdown-body h2{font-size:1.5em}.markdown-body h3{font-size:1.25em}.markdown-body h4{font-size:1em}.markdown-body h5{font-size:.875em}.markdown-body h6{font-size:.85em;color:#777}.markdown-body ol,.markdown-body ul{padding-left:2em}.markdown-body ol.no-list,.markdown-body ul.no-list{padding:0;list-style-type:none}.markdown-body ol ol,.markdown-body ol ul,.markdown-body ul ol,.markdown-body ul ul{margin-top:0;margin-bottom:0}.markdown-body li>p{margin-top:16px}.markdown-body li+li{margin-top:.25em}.markdown-body dl{padding:0}.markdown-body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:700}.markdown-body dl dd{padding:0 16px;margin-bottom:16px}.markdown-body table{display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}.markdown-body table th{font-weight:700}.markdown-body table td,.markdown-body table th{padding:6px 13px;border:1px solid #ddd}.markdown-body table tr{background-color:#fff;border-top:1px solid #ccc}.markdown-body table tr:nth-child(2n){background-color:#f8f8f8}.markdown-body img{max-width:100%;box-sizing:content-box;background-color:#fff}.markdown-body img[align=right]{padding-left:20px}.markdown-body img[align=left]{padding-right:20px}.markdown-body .emoji{max-width:none;vertical-align:text-top;background-color:transparent}.markdown-body span.frame{display:block;overflow:hidden}.markdown-body span.frame>span{display:block;float:left;width:auto;padding:7px;margin:13px 0 0;overflow:hidden;border:1px solid #ddd}.markdown-body span.frame span img{display:block;float:left}.markdown-body span.frame span span{display:block;padding:5px 0 0;clear:both;color:#333}.markdown-body span.align-center{display:block;overflow:hidden;clear:both}.markdown-body span.align-center>span{display:block;margin:13px auto 0;overflow:hidden;text-align:center}.markdown-body span.align-center span img{margin:0 auto;text-align:center}.markdown-body span.align-right{display:block;overflow:hidden;clear:both}.markdown-body span.align-right>span{display:block;margin:13px 0 0;overflow:hidden;text-align:right}.markdown-body span.align-right span img{margin:0;text-align:right}.markdown-body span.float-left{display:block;float:left;margin-right:13px;overflow:hidden}.markdown-body span.float-left span{margin:13px 0 0}.markdown-body span.float-right{display:block;float:right;margin-left:13px;overflow:hidden}.markdown-body span.float-right>span{display:block;margin:13px auto 0;overflow:hidden;text-align:right}.markdown-body code,.markdown-body tt{padding:0;padding-top:.2em;padding-bottom:.2em;margin:0;font-size:85%;background-color:rgba(0,0,0,.04);border-radius:3px}.markdown-body code:after,.markdown-body code:before,.markdown-body tt:after,.markdown-body tt:before{letter-spacing:-.2em;content:"\A0"}.markdown-body code br,.markdown-body tt br{display:none}.markdown-body del code{text-decoration:inherit}.markdown-body pre{word-wrap:normal}.markdown-body pre>code{padding:0;margin:0;font-size:100%;word-break:normal;white-space:pre;background:transparent;border:0}.markdown-body .highlight{margin-bottom:16px}.markdown-body .highlight pre{margin-bottom:0;word-break:normal}.markdown-body .highlight pre,.markdown-body pre{padding:16px;overflow:auto;font-size:85%;line-height:1.45;background-color:#f7f7f7;border-radius:3px}.markdown-body pre code,.markdown-body pre tt{display:inline;max-width:auto;padding:0;margin:0;overflow:visible;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}.markdown-body pre code:after,.markdown-body pre code:before,.markdown-body pre tt:after,.markdown-body pre tt:before{content:normal}.markdown-body .csv-data td,.markdown-body .csv-data th{padding:5px;overflow:hidden;font-size:12px;line-height:1;text-align:left;white-space:nowrap}.markdown-body .csv-data .blob-line-num{padding:10px 8px 9px;text-align:right;background:#fff;border:0}.markdown-body .csv-data tr{border-top:0}.markdown-body .csv-data th{font-weight:700;background:#f8f8f8;border-top:0}.markdown-body kbd{display:inline-block;padding:3px 5px;font-size:11px;line-height:10px;color:#555;vertical-align:middle;background-color:#fcfcfc;border:1px solid #ccc;border-bottom-color:#bbb;border-radius:3px;box-shadow:inset 0 -1px 0 #bbb}.news .alert .markdown-body blockquote{padding:0 0 0 40px;border:0 none}.activity-tab .news .alert .commits,.activity-tab .news .markdown-body blockquote{padding-left:0}.task-list-item{list-style-type:none}.task-list-item label{font-weight:400}.task-list-item.enabled label{cursor:pointer}.task-list-item+.task-list-item{margin-top:3px}.task-list-item-checkbox{float:left;margin:.31em 0 .2em -1.3em!important;vertical-align:middle;cursor:default!important}.markdown-body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,sans-serif;padding-top:40px;padding-bottom:40px;max-width:758px;overflow:visible!important}.markdown-body pre{border:inherit!important}.markdown-body code{color:inherit!important}.markdown-body pre code .wrapper{display:-moz-inline-flex;display:-ms-inline-flex;display:-o-inline-flex;display:inline-flex}.markdown-body pre code .gutter{float:left;overflow:hidden;-webkit-user-select:none;user-select:none}.markdown-body pre code .gutter.linenumber{text-align:right;position:relative;display:inline-block;cursor:default;z-index:4;padding:0 8px 0 0;min-width:20px;box-sizing:content-box;color:#afafaf!important;border-right:3px solid #6ce26c!important}.markdown-body pre code .gutter.linenumber>span:before{content:attr(data-linenumber)}.markdown-body pre code .code{float:left;margin:0 0 0 16px}.markdown-body .gist .line-numbers{border-left:none;border-top:none;border-bottom:none}.markdown-body .gist .line-data{border:none}.markdown-body .gist table{border-spacing:0;border-collapse:inherit!important}.markdown-body code[data-gist-id]{background:none;padding:0}.markdown-body code[data-gist-id]:after,.markdown-body code[data-gist-id]:before{content:""}.markdown-body code[data-gist-id] .blob-num{border:unset}.markdown-body code[data-gist-id] table{overflow:unset;margin-bottom:unset}.markdown-body code[data-gist-id] table tr{background:unset}.markdown-body[dir=rtl] pre{direction:ltr}.markdown-body[dir=rtl] code{direction:ltr;unicode-bidi:embed}.markdown-body .alert>p{margin-bottom:0}.markdown-body pre.abc,.markdown-body pre.flow-chart,.markdown-body pre.graphviz,.markdown-body pre.mermaid,.markdown-body pre.sequence-diagram{text-align:center;background-color:inherit;border-radius:0;white-space:inherit}.markdown-body pre.abc>code,.markdown-body pre.flow-chart>code,.markdown-body pre.graphviz>code,.markdown-body pre.mermaid>code,.markdown-body pre.sequence-diagram>code{text-align:left}.markdown-body pre.abc>svg,.markdown-body pre.flow-chart>svg,.markdown-body pre.graphviz>svg,.markdown-body pre.mermaid>svg,.markdown-body pre.sequence-diagram>svg{max-width:100%;height:100%}.markdown-body pre>code.wrap{white-space:pre-wrap;white-space:-moz-pre-wrap;white-space:-pre-wrap;white-space:-o-pre-wrap;word-wrap:break-word}.markdown-body .alert>p,.markdown-body .alert>ul{margin-bottom:0}.vimeo,.youtube{cursor:pointer;display:table;text-align:center;background-position:50%;background-repeat:no-repeat;background-size:contain;background-color:#000;overflow:hidden}.vimeo,.youtube{position:relative;width:100%}.youtube{padding-bottom:56.25%}.vimeo img{width:100%;object-fit:contain;z-index:0}.youtube img{object-fit:cover;z-index:0}.vimeo iframe,.youtube iframe,.youtube img{width:100%;height:100%;position:absolute;top:0;left:0}.vimeo iframe,.youtube iframe{vertical-align:middle;z-index:1}.vimeo .icon,.youtube .icon{position:absolute;height:auto;width:auto;top:50%;left:50%;transform:translate(-50%,-50%);color:#fff;opacity:.3;transition:opacity .2s;z-index:0}.vimeo:hover .icon,.youtube:hover .icon{opacity:.6;transition:opacity .2s}.slideshare .inner,.speakerdeck .inner{position:relative;width:100%}.slideshare .inner iframe,.speakerdeck .inner iframe{position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%}.MJX_Assistive_MathML{display:none}.ui-infobar{position:relative;z-index:2;max-width:758px;margin-top:25px;margin-bottom:-25px;color:#777}.ui-toc{position:fixed;bottom:20px;z-index:10000}.ui-toc-label{opacity:.3;background-color:#ccc;border:none;transition:opacity .2s}.ui-toc .open .ui-toc-label{opacity:1;color:#fff;transition:opacity .2s}.ui-toc-label:focus{opacity:.3;background-color:#ccc;color:#000}.ui-toc-label:hover{opacity:1;background-color:#ccc;transition:opacity .2s}.ui-toc-dropdown{margin-top:23px;margin-bottom:20px;padding-left:10px;padding-right:10px;max-width:45vw;width:25vw;max-height:70vh;overflow:auto;text-align:inherit}.ui-toc-dropdown>.toc{max-height:calc(70vh - 100px);overflow:auto}.ui-toc-dropdown[dir=rtl] .nav{padding-right:0;letter-spacing:.0029em}.ui-toc-dropdown a{overflow:hidden;text-overflow:ellipsis;white-space:pre}.ui-toc-dropdown .nav>li>a{display:block;padding:4px 20px;font-size:13px;font-weight:500;color:#767676}.ui-toc-dropdown .nav>li:first-child:last-child > ul,.ui-toc-dropdown .toc.expand ul{display:block}.ui-toc-dropdown .nav>li>a:focus,.ui-toc-dropdown .nav>li>a:hover{padding-left:19px;color:#000;text-decoration:none;background-color:transparent;border-left:1px solid #000}.ui-toc-dropdown[dir=rtl] .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav>li>a:hover{padding-right:19px;border-left:none;border-right:1px solid #000}.ui-toc-dropdown .nav>.active:focus>a,.ui-toc-dropdown .nav>.active:hover>a,.ui-toc-dropdown .nav>.active>a{padding-left:18px;font-weight:700;color:#000;background-color:transparent;border-left:2px solid #000}.ui-toc-dropdown[dir=rtl] .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav>.active>a{padding-right:18px;border-left:none;border-right:2px solid #000}.ui-toc-dropdown .nav .nav{display:none;padding-bottom:10px}.ui-toc-dropdown .nav>.active>ul{display:block}.ui-toc-dropdown .nav .nav>li>a{padding-top:1px;padding-bottom:1px;padding-left:30px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a{padding-right:30px}.ui-toc-dropdown .nav .nav>li>ul>li>a{padding-top:1px;padding-bottom:1px;padding-left:40px;font-size:12px;font-weight:400}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a{padding-right:40px}.ui-toc-dropdown .nav .nav>li>a:focus,.ui-toc-dropdown .nav .nav>li>a:hover{padding-left:29px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>a:hover{padding-right:29px}.ui-toc-dropdown .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown .nav .nav>li>ul>li>a:hover{padding-left:39px}.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:focus,.ui-toc-dropdown[dir=rtl] .nav .nav>li>ul>li>a:hover{padding-right:39px}.ui-toc-dropdown .nav .nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>a{padding-left:28px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>a{padding-right:28px}.ui-toc-dropdown .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown .nav .nav>.active>.nav>.active>a{padding-left:38px;font-weight:500}.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:focus>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active:hover>a,.ui-toc-dropdown[dir=rtl] .nav .nav>.active>.nav>.active>a{padding-right:38px}.markdown-body[lang^=ja]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,\\30D2\30E9\30AE\30CE\89D2\30B4 Pro W3,Osaka,Meiryo,\\30E1\30A4\30EA\30AA,MS Gothic,"\FF2D\FF33   \30B4\30B7\30C3\30AF",sans-serif}.ui-toc-dropdown[lang^=ja]{font-family:Source Sans Pro,Helvetica,Arial,Meiryo UI,MS PGothic,"\FF2D\FF33   \FF30\30B4\30B7\30C3\30AF",sans-serif}.markdown-body[lang=zh-tw]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang TC,Microsoft JhengHei,\\5FAE\8EDF\6B63\9ED1,sans-serif}.ui-toc-dropdown[lang=zh-tw]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft JhengHei UI,\\5FAE\8EDF\6B63\9ED1UI,sans-serif}.markdown-body[lang=zh-cn]{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,Arial,PingFang SC,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,sans-serif}.ui-toc-dropdown[lang=zh-cn]{font-family:Source Sans Pro,Helvetica,Arial,Microsoft YaHei UI,\\5FAE\8F6F\96C5\9ED1UI,sans-serif}.ui-affix-toc{position:fixed;top:0;max-width:15vw;max-height:70vh;overflow:auto}.back-to-top,.expand-toggle,.go-to-bottom{display:block;padding:4px 10px;margin-top:10px;margin-left:10px;font-size:12px;font-weight:500;color:#999}.back-to-top:focus,.back-to-top:hover,.expand-toggle:focus,.expand-toggle:hover,.go-to-bottom:focus,.go-to-bottom:hover{color:#563d7c;text-decoration:none}.back-to-top,.go-to-bottom{margin-top:0}.ui-user-icon{width:20px;height:20px;display:block;border-radius:3px;margin-top:2px;margin-bottom:2px;margin-right:5px;background-position:50%;background-repeat:no-repeat;background-size:contain}.ui-user-icon.small{width:18px;height:18px;display:inline-block;vertical-align:middle;margin:0 0 .2em}.ui-infobar>small>span{line-height:22px}.ui-infobar>small .dropdown{display:inline-block}.ui-infobar>small .dropdown a:focus,.ui-infobar>small .dropdown a:hover{text-decoration:none}.unselectable{-moz-user-select:none;-webkit-user-select:none;-o-user-select:none;user-select:none}@media print{blockquote,div,img,pre,table{page-break-inside:avoid!important}a[href]:after{font-size:12px!important}}.markdown-body.slides{position:relative;z-index:1;color:#222}.markdown-body.slides:before{content:"";display:block;position:absolute;top:0;left:0;right:0;bottom:0;z-index:-1;background-color:currentColor;box-shadow:0 0 0 50vw}.markdown-body.slides section[data-markdown]{position:relative;margin-bottom:1.5em;background-color:#fff;text-align:center}.markdown-body.slides section[data-markdown] code{text-align:left}.markdown-body.slides section[data-markdown]:before{content:"";display:block;padding-bottom:56.23%}.markdown-body.slides section[data-markdown]>div:first-child{position:absolute;top:50%;left:1em;right:1em;transform:translateY(-50%);max-height:100%;overflow:hidden}.markdown-body.slides section[data-markdown]>ul{display:inline-block}.markdown-body.slides>section>section+section:after{content:"";position:absolute;top:-1.5em;right:1em;height:1.5em;border:3px solid #777}body{font-smoothing:subpixel-antialiased!important;-webkit-font-smoothing:subpixel-antialiased!important;-moz-osx-font-smoothing:auto!important;text-shadow:0 0 1em transparent,1px 1px 1.2px rgba(0,0,0,.004);-webkit-overflow-scrolling:touch;font-family:Source Sans Pro,Helvetica,Arial,sans-serif;letter-spacing:.025em}.focus,:focus{outline:none!important}::-moz-focus-inner{border:0!important}body.modal-open{overflow-y:auto;padding-right:0!important}
+    </style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYa0g=" crossorigin="anonymous"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js" integrity="sha256-g6iAfvZp+nDQ2TdTR/VVKJf3bGro4ub5fvWSWVRi2NE=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/es5-shim/4.5.9/es5-shim.min.js" integrity="sha256-8E4Is26QH0bD52WoQpcB+R/tcWQtpzlCojrybUd7Mxo=" crossorigin="anonymous"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div id="doc" class="markdown-body container-fluid" style="position: relative;"><h1 id="rolodex-test-script"><a class="anchor hidden-xs" href="#rolodex-test-script" title="rolodex-test-script"><span class="octicon octicon-link"></span></a>Rolodex - Test Script</h1><p>This is a document explaining the steps to perform manual testing (i.e. manual scripted testing), starting with how to load the sample data.</p><p>You can also view this document <a href="https://cs2103aug2017-w11-b2.github.io/TestScript" target="_blank">here</a> in all its html glory.</p><h2 id="setting-up"><a class="anchor hidden-xs" href="#setting-up" title="setting-up"><span class="octicon octicon-link"></span></a>Setting Up</h2><ol>
+<li><strong>Follow the instructions with numbers labeled closely.</strong></li>
+<li>Start up rolodex.jar in an empty directory and close it.</li>
+<li>You should see a preferences.json file in the same directory as your jar file.</li>
+<li>Replace the value of the key rolodexFilePath in the json file to a directory of your choosing.</li>
+<li>Place SampleData.rldx in that directory. We recommend creating a directory data in the same folder as your rolodex.jar file and placing SampleData.rldx in there. (i.e. <em>data/SampleData.rldx</em>)</li>
+<li>Start up rolodex.jar again. You should see the application loaded with at least 25 sample contacts.</li>
+<li>The status bar on the bottom right should correctly display the directory at which you placed the SampleData.rldx (the file you are going to be operating on).</li>
+</ol><h2 id="add-command"><a class="anchor hidden-xs" href="#add-command" title="add-command"><span class="octicon octicon-link"></span></a>Add Command</h2><h3 id="basic-functionality"><a class="anchor hidden-xs" href="#basic-functionality" title="basic-functionality"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>add n/Alice Ken p/91234567 e/alice@gmail.com a/900, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour"><a class="anchor hidden-xs" href="#expected-behaviour" title="expected-behaviour"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory.</li>
+</ul><h3 id="abbreviations"><a class="anchor hidden-xs" href="#abbreviations" title="abbreviations"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>a n/Alice Ken p/91234567 e/alice@gmail.com a/800, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour1"><a class="anchor hidden-xs" href="#expected-behaviour1" title="expected-behaviour1"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><hr><ol>
+<li>Type <code>+ n/Alice Ken p/91234567 e/alice@gmail.com a/700, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour2"><a class="anchor hidden-xs" href="#expected-behaviour2" title="expected-behaviour2"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><h3 id="drop-down-list"><a class="anchor hidden-xs" href="#drop-down-list" title="drop-down-list"><span class="octicon octicon-link"></span></a>Drop-down List</h3><ol>
+<li>Type <code>a</code></li>
+<li>Press <code>Enter</code> or click to select the <code>add</code> option in the drop-down list</li>
+<li>Press <code>Space</code></li>
+<li>Type <code>n/Alice Ken p/91234567 e/alice@gmail.com a/900, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour3"><a class="anchor hidden-xs" href="#expected-behaviour3" title="expected-behaviour3"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><h3 id="auto-completion"><a class="anchor hidden-xs" href="#auto-completion" title="auto-completion"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>add</code> and press <code>Tab</code></li>
+<li>Type <code>Alice Ken</code> and press <code>Tab</code></li>
+<li>Type <code>91234567</code> and press <code>Tab</code></li>
+<li>Type <code>alice@gmail.com</code> and press <code>Tab</code></li>
+<li>Type <code>900, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour4"><a class="anchor hidden-xs" href="#expected-behaviour4" title="expected-behaviour4"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><h3 id="invalid-command-suggestion"><a class="anchor hidden-xs" href="#invalid-command-suggestion" title="invalid-command-suggestion"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>add alice@gmail.com Alice Ken 900, Alice Street 91234567</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean add n/Alice Ken p/91234567 e/alice@gmail.com a/900, Alice Street?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour5"><a class="anchor hidden-xs" href="#expected-behaviour5" title="expected-behaviour5"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><h3 id="keyboard-shortcut"><a class="anchor hidden-xs" href="#keyboard-shortcut" title="keyboard-shortcut"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>+</code></li>
+<li>Type <code>Alice Ken</code> and press <code>Tab</code></li>
+<li>Type <code>91234567</code> and press <code>Tab</code></li>
+<li>Type <code>alice@gmail.com</code> and press <code>Tab</code></li>
+<li>Type <code>900, Alice Street</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour6"><a class="anchor hidden-xs" href="#expected-behaviour6" title="expected-behaviour6"><span class="octicon octicon-link"></span></a>Expected Behaviour:</h4><ul>
+<li>New contact with entered particulars is added to Rolodex</li>
+<li>Contact is automatically displayed on the bottom right panel</li>
+<li>Name, phone, email and address fields are compulsory</li>
+</ul><h2 id="delete-command"><a class="anchor hidden-xs" href="#delete-command" title="delete-command"><span class="octicon octicon-link"></span></a>Delete Command</h2><h3 id="basic-functionality1"><a class="anchor hidden-xs" href="#basic-functionality1" title="basic-functionality1"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>delete 1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour7"><a class="anchor hidden-xs" href="#expected-behaviour7" title="expected-behaviour7"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact is deleted from Rolodex</li>
+</ul><h3 id="abbreviations1"><a class="anchor hidden-xs" href="#abbreviations1" title="abbreviations1"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>d 2</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour8"><a class="anchor hidden-xs" href="#expected-behaviour8" title="expected-behaviour8"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Second contact is deleted from Rolodex</li>
+</ul><hr><ol>
+<li>Type <code>- 3</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour9"><a class="anchor hidden-xs" href="#expected-behaviour9" title="expected-behaviour9"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Third contact is deleted from Rolodex</li>
+</ul><h3 id="auto-completion1"><a class="anchor hidden-xs" href="#auto-completion1" title="auto-completion1"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>delete</code> and press <code>Tab</code></li>
+<li>Type <code>1</code> and press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour10"><a class="anchor hidden-xs" href="#expected-behaviour10" title="expected-behaviour10"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact is deleted from Rolodex</li>
+</ul><h3 id="invalid-command-suggestion1"><a class="anchor hidden-xs" href="#invalid-command-suggestion1" title="invalid-command-suggestion1"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>d21 durian</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean D21?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior"><a class="anchor hidden-xs" href="#expected-behavior" title="expected-behavior"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The 21st contact is deleted from Rolodex</li>
+</ul><h3 id="keyboard-shortcut1"><a class="anchor hidden-xs" href="#keyboard-shortcut1" title="keyboard-shortcut1"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>D</code></li>
+<li>Type <code>1</code> and press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour11"><a class="anchor hidden-xs" href="#expected-behaviour11" title="expected-behaviour11"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact is deleted from Rolodex</li>
+</ul><h2 id="edit-command"><a class="anchor hidden-xs" href="#edit-command" title="edit-command"><span class="octicon octicon-link"></span></a>Edit Command</h2><h3 id="basic-functionality2"><a class="anchor hidden-xs" href="#basic-functionality2" title="basic-functionality2"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>edit 1 n/A p/99999999 e/edit@gmail.com r/Edited contact. t/edited</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour12"><a class="anchor hidden-xs" href="#expected-behaviour12" title="expected-behaviour12"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The particulars of the first contact are edited with the new inputs.</li>
+<li>The tag <code>edited</code> should be added to the existing tags.</li>
+<li>The edited contact is automatically displayed on the bottom right panel</li>
+</ul><h3 id="tag-toggling"><a class="anchor hidden-xs" href="#tag-toggling" title="tag-toggling"><span class="octicon octicon-link"></span></a>Tag Toggling</h3><ol>
+<li>Type <code>edit 1 t/edited</code> (A should be the first contact)</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour13"><a class="anchor hidden-xs" href="#expected-behaviour13" title="expected-behaviour13"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The tag <code>edited</code> should be removed from A</li>
+</ul><h3 id="abbreviations2"><a class="anchor hidden-xs" href="#abbreviations2" title="abbreviations2"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>e 1 n/B</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour14"><a class="anchor hidden-xs" href="#expected-behaviour14" title="expected-behaviour14"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact should be renamed to B</li>
+</ul><hr><ol>
+<li>Type <code>change 1 p/88888888</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour15"><a class="anchor hidden-xs" href="#expected-behaviour15" title="expected-behaviour15"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Phone number of first contact should now be “88888888”</li>
+</ul><hr><ol>
+<li>Type <code>modify 1 e/modified@mail.com</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour16"><a class="anchor hidden-xs" href="#expected-behaviour16" title="expected-behaviour16"><span class="octicon octicon-link"></span></a>Expected behaviour</h4><ul>
+<li>Email of first contact should now be <a href="mailto:%22modified@mail.com" target="_blank">"modified@mail.com</a>"</li>
+</ul><h3 id="drop-down-list1"><a class="anchor hidden-xs" href="#drop-down-list1" title="drop-down-list1"><span class="octicon octicon-link"></span></a>Drop-down List</h3><ol>
+<li>Type <code>e</code></li>
+<li>Press <code>↓</code> until the <code>edit</code> option is highlighted in the drop-down list</li>
+<li>Press <code>Enter</code></li>
+<li>Press <code>Space</code></li>
+<li>Type <code>n/A p/99999999 e/edit@gmail.com r/Edited contact. t/edited</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour17"><a class="anchor hidden-xs" href="#expected-behaviour17" title="expected-behaviour17"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The particulars of the first contact are edited with the new inputs.</li>
+<li>The tag <code>edited</code> should be added to the existing tags.</li>
+<li>The edited contact is automatically displayed on the bottom right panel</li>
+</ul><h3 id="auto-completion2"><a class="anchor hidden-xs" href="#auto-completion2" title="auto-completion2"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>edit</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>1 n/B</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour18"><a class="anchor hidden-xs" href="#expected-behaviour18" title="expected-behaviour18"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact should be renamed to B</li>
+</ul><h3 id="invalid-command-suggestion2"><a class="anchor hidden-xs" href="#invalid-command-suggestion2" title="invalid-command-suggestion2"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>edit 1Alice</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean edit 1 n/Alice?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour19"><a class="anchor hidden-xs" href="#expected-behaviour19" title="expected-behaviour19"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact should be renamed to alice</li>
+</ul><hr><ol>
+<li>Type <code>edt 1 12345678</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean edit 1 p/12345678?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour20"><a class="anchor hidden-xs" href="#expected-behaviour20" title="expected-behaviour20"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Phone number of first contact should now be “12345678”</li>
+</ul><hr><ol>
+<li>Type <code>edi 1 abc@efg</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean edit 1 e/abc@efg?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour21"><a class="anchor hidden-xs" href="#expected-behaviour21" title="expected-behaviour21"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Email of first contact should now be “abc@efg”</li>
+</ul><hr><ol>
+<li>Type <code>dit 1 3 computing drive</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean edit 1 a/3 computing drive?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour22"><a class="anchor hidden-xs" href="#expected-behaviour22" title="expected-behaviour22"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Address of first contact should now be “3 computing drive”</li>
+</ul><h3 id="keyboard-shortcut2"><a class="anchor hidden-xs" href="#keyboard-shortcut2" title="keyboard-shortcut2"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>E</code></li>
+<li>Type <code>1 n/bob</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour23"><a class="anchor hidden-xs" href="#expected-behaviour23" title="expected-behaviour23"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>First contact should be renamed to bob</li>
+</ul><h2 id="select-command"><a class="anchor hidden-xs" href="#select-command" title="select-command"><span class="octicon octicon-link"></span></a>Select Command</h2><h3 id="basic-functionality3"><a class="anchor hidden-xs" href="#basic-functionality3" title="basic-functionality3"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>select 1</code></li>
+</ol><h4 id="expected-behaviour24"><a class="anchor hidden-xs" href="#expected-behaviour24" title="expected-behaviour24"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be selected</li>
+</ul><h3 id="abbreviations3"><a class="anchor hidden-xs" href="#abbreviations3" title="abbreviations3"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>s 2</code></li>
+</ol><h4 id="expected-behaviour25"><a class="anchor hidden-xs" href="#expected-behaviour25" title="expected-behaviour25"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The second contact should be selected</li>
+</ul><h3 id="drop-down-list2"><a class="anchor hidden-xs" href="#drop-down-list2" title="drop-down-list2"><span class="octicon octicon-link"></span></a>Drop-Down List</h3><ol>
+<li>Type <code>s</code></li>
+<li>Press <code>↓</code> until the <code>select</code> option is highlighted in the drop-down list</li>
+<li>Press <code>Enter</code></li>
+<li>Press <code>space</code> and type <code>3</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour26"><a class="anchor hidden-xs" href="#expected-behaviour26" title="expected-behaviour26"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The third contact should be selected</li>
+</ul><h3 id="auto-completion3"><a class="anchor hidden-xs" href="#auto-completion3" title="auto-completion3"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>s</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour27"><a class="anchor hidden-xs" href="#expected-behaviour27" title="expected-behaviour27"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be selected</li>
+</ul><h3 id="invalid-command-suggestion3"><a class="anchor hidden-xs" href="#invalid-command-suggestion3" title="invalid-command-suggestion3"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>s1</code></li>
+<li>Press<code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted “Did you mean s 1?”</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour28"><a class="anchor hidden-xs" href="#expected-behaviour28" title="expected-behaviour28"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be selected</li>
+</ul><h3 id="keyboard-shortcut3"><a class="anchor hidden-xs" href="#keyboard-shortcut3" title="keyboard-shortcut3"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Esc</code></li>
+<li>Press <code>↓</code> or <code>↑</code> several times</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour29"><a class="anchor hidden-xs" href="#expected-behaviour29" title="expected-behaviour29"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>In step 1, the command box should be deselected</li>
+<li>In step 2, the contact list should be scrollable</li>
+<li>In step 3, the command box should be selected</li>
+</ul><h2 id="email-command"><a class="anchor hidden-xs" href="#email-command" title="email-command"><span class="octicon octicon-link"></span></a>Email Command</h2><h3 id="basic-functionality4"><a class="anchor hidden-xs" href="#basic-functionality4" title="basic-functionality4"><span class="octicon octicon-link"></span></a>Basic functionality</h3><ol>
+<li>Type <code>email 1 s/hello</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour30"><a class="anchor hidden-xs" href="#expected-behaviour30" title="expected-behaviour30"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Your default email client should open a new compose email window</li>
+<li>Recipient’s email address should be the first contact’s email address</li>
+<li>Subject should be “hello”</li>
+</ul><hr><ol>
+<li>Type <code>email 1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour31"><a class="anchor hidden-xs" href="#expected-behaviour31" title="expected-behaviour31"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Your default email client should open a new compose email window</li>
+<li>Recipient’s email address should be the first contact’s email address (Subject field is optional)</li>
+</ul><h3 id="auto-completion4"><a class="anchor hidden-xs" href="#auto-completion4" title="auto-completion4"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>M</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>1 s/hello</code></li>
+<li>Press <code>Tab</code></li>
+</ol><h4 id="expected-behaviour32"><a class="anchor hidden-xs" href="#expected-behaviour32" title="expected-behaviour32"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Your default email client should open a new compose email window</li>
+<li>Recipient’s email address should be the first contact’s email address</li>
+<li>Subject should be “hello”</li>
+</ul><h3 id="invalid-command-suggestion4"><a class="anchor hidden-xs" href="#invalid-command-suggestion4" title="invalid-command-suggestion4"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>mal1 hello</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted “Did you mean mail 1 s/hello?”</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour33"><a class="anchor hidden-xs" href="#expected-behaviour33" title="expected-behaviour33"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Your default email client should open a new compose email window</li>
+<li>Recipient’s email address should be the first contact’s email address</li>
+<li>Subject should be “hello”</li>
+</ul><h3 id="keyboard-shortcut4"><a class="anchor hidden-xs" href="#keyboard-shortcut4" title="keyboard-shortcut4"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>M</code></li>
+<li>Type <code>1 s/hello</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour34"><a class="anchor hidden-xs" href="#expected-behaviour34" title="expected-behaviour34"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>Your default email client should open a new compose email window</li>
+<li>Recipient’s email address should be the first contact’s email address</li>
+<li>Subject should be “hello”</li>
+</ul><h2 id="find-command"><a class="anchor hidden-xs" href="#find-command" title="find-command"><span class="octicon octicon-link"></span></a>Find Command</h2><h3 id="find-by-name"><a class="anchor hidden-xs" href="#find-by-name" title="find-by-name"><span class="octicon octicon-link"></span></a>Find by name</h3><h4 id="exact-matches"><a class="anchor hidden-xs" href="#exact-matches" title="exact-matches"><span class="octicon octicon-link"></span></a>Exact matches</h4><ol>
+<li>Type <code>find bravo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h5 id="expected-behavior1"><a class="anchor hidden-xs" href="#expected-behavior1" title="expected-behavior1"><span class="octicon octicon-link"></span></a>Expected behavior</h5><ul>
+<li>The contact list is filtered with contacts with the name “Bravo”</li>
+</ul><h4 id="fuzzy-matching"><a class="anchor hidden-xs" href="#fuzzy-matching" title="fuzzy-matching"><span class="octicon octicon-link"></span></a>Fuzzy Matching</h4><ol>
+<li>Type <code>find brabo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h5 id="expected-behavior2"><a class="anchor hidden-xs" href="#expected-behavior2" title="expected-behavior2"><span class="octicon octicon-link"></span></a>Expected Behavior</h5><ul>
+<li>The contact list is filtered with contacts roughly matching the name “brabo”, “Bravo” included.</li>
+</ul><h3 id="find-by-tag"><a class="anchor hidden-xs" href="#find-by-tag" title="find-by-tag"><span class="octicon octicon-link"></span></a>Find by tag</h3><ol>
+<li>Type <code>find friends</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior3"><a class="anchor hidden-xs" href="#expected-behavior3" title="expected-behavior3"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”.</li>
+</ul><h3 id="sorting"><a class="anchor hidden-xs" href="#sorting" title="sorting"><span class="octicon octicon-link"></span></a>Sorting</h3><ol>
+<li>Type <code>find friends n/desc</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior4"><a class="anchor hidden-xs" href="#expected-behavior4" title="expected-behavior4"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”, sorted by descending order of name.</li>
+</ul><hr><ol>
+<li>Type <code>find friends p/desc</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior5"><a class="anchor hidden-xs" href="#expected-behavior5" title="expected-behavior5"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”, sorted by descending phone.</li>
+</ul><hr><ol>
+<li>Type <code>find friends p/desc</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior6"><a class="anchor hidden-xs" href="#expected-behavior6" title="expected-behavior6"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”, sorted by descending phone.</li>
+</ul><hr><ol>
+<li>Type <code>find friends p/desc a/</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior7"><a class="anchor hidden-xs" href="#expected-behavior7" title="expected-behavior7"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”, sorted by descending phone, then by ascending address.</li>
+</ul><h3 id="auto-completion5"><a class="anchor hidden-xs" href="#auto-completion5" title="auto-completion5"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>find</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>bravo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior8"><a class="anchor hidden-xs" href="#expected-behavior8" title="expected-behavior8"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts roughly matching the name “brabo”, “Bravo” included.</li>
+</ul><h3 id="keyboard-shortcut5"><a class="anchor hidden-xs" href="#keyboard-shortcut5" title="keyboard-shortcut5"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>F</code></li>
+<li>Type <code>school</code> and press <code>Enter</code></li>
+</ol><h4 id="expected-behavior9"><a class="anchor hidden-xs" href="#expected-behavior9" title="expected-behavior9"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “school”.</li>
+</ul><h3 id="invalid-command-suggestion5"><a class="anchor hidden-xs" href="#invalid-command-suggestion5" title="invalid-command-suggestion5"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>findmy friends</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean find friends?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior10"><a class="anchor hidden-xs" href="#expected-behavior10" title="expected-behavior10"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list is filtered with contacts tagged as “friends”.</li>
+</ul><h2 id="help-command"><a class="anchor hidden-xs" href="#help-command" title="help-command"><span class="octicon octicon-link"></span></a>Help Command</h2><h3 id="basic-functionality5"><a class="anchor hidden-xs" href="#basic-functionality5" title="basic-functionality5"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>help</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior11"><a class="anchor hidden-xs" href="#expected-behavior11" title="expected-behavior11"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The Rolodex User Guide should be opened in a new window</li>
+</ul><h3 id="help-window-searching"><a class="anchor hidden-xs" href="#help-window-searching" title="help-window-searching"><span class="octicon octicon-link"></span></a>Help Window Searching</h3><ol>
+<li>Type <code>add</code> into the search bar located at the top of the window</li>
+<li>Press <code>Enter</code> or click the <em>Search</em> button</li>
+</ol><h4 id="expected-behavior12"><a class="anchor hidden-xs" href="#expected-behavior12" title="expected-behavior12"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All words “add” in the document should be highlighted in yellow</li>
+</ul><h3 id="invalid-command-suggestion6"><a class="anchor hidden-xs" href="#invalid-command-suggestion6" title="invalid-command-suggestion6"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>halp me</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean help?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior13"><a class="anchor hidden-xs" href="#expected-behavior13" title="expected-behavior13"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The Rolodex User Guide should be opened in a new window</li>
+</ul><h2 id="history-command"><a class="anchor hidden-xs" href="#history-command" title="history-command"><span class="octicon octicon-link"></span></a>History Command</h2><h3 id="basic-functionality6"><a class="anchor hidden-xs" href="#basic-functionality6" title="basic-functionality6"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>history</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior14"><a class="anchor hidden-xs" href="#expected-behavior14" title="expected-behavior14"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>Entered commands from most recent to earliest should be displayed on the result panel</li>
+</ul><h3 id="invalid-command-suggestion7"><a class="anchor hidden-xs" href="#invalid-command-suggestion7" title="invalid-command-suggestion7"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>hisdory is a dory pun</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean history?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior15"><a class="anchor hidden-xs" href="#expected-behavior15" title="expected-behavior15"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>Entered commands from most recent to earliest should be displayed on the result panel</li>
+</ul><h3 id="keyboard-shortcut6"><a class="anchor hidden-xs" href="#keyboard-shortcut6" title="keyboard-shortcut6"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Type <code>Ctrl</code> + <code>H</code></li>
+</ol><h4 id="expected-behavior16"><a class="anchor hidden-xs" href="#expected-behavior16" title="expected-behavior16"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>Entered commands from most recent to earliest should be displayed on the result panel</li>
+</ul><h2 id="list-command"><a class="anchor hidden-xs" href="#list-command" title="list-command"><span class="octicon octicon-link"></span></a>List Command</h2><h3 id="basic-functionality7"><a class="anchor hidden-xs" href="#basic-functionality7" title="basic-functionality7"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>list</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior17"><a class="anchor hidden-xs" href="#expected-behavior17" title="expected-behavior17"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><h3 id="abbreviations4"><a class="anchor hidden-xs" href="#abbreviations4" title="abbreviations4"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>l</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior18"><a class="anchor hidden-xs" href="#expected-behavior18" title="expected-behavior18"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><hr><ol>
+<li>Type <code>show</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior19"><a class="anchor hidden-xs" href="#expected-behavior19" title="expected-behavior19"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><hr><ol>
+<li>Type <code>display</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior20"><a class="anchor hidden-xs" href="#expected-behavior20" title="expected-behavior20"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><h3 id="sorting1"><a class="anchor hidden-xs" href="#sorting1" title="sorting1"><span class="octicon octicon-link"></span></a>Sorting</h3><ol>
+<li>Type <code>list p/asc a/desc</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior21"><a class="anchor hidden-xs" href="#expected-behavior21" title="expected-behavior21"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>The contact list should be sorted by ascending phone, then by descending address.</li>
+</ul><h3 id="invalid-command-suggestion8"><a class="anchor hidden-xs" href="#invalid-command-suggestion8" title="invalid-command-suggestion8"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>lost is me, Am I lost? Yes I am. Lost little lamb</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code>  when prompted ‘Did you mean list?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behavior22"><a class="anchor hidden-xs" href="#expected-behavior22" title="expected-behavior22"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><h3 id="keyboard-shortcut7"><a class="anchor hidden-xs" href="#keyboard-shortcut7" title="keyboard-shortcut7"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>L</code></li>
+</ol><h4 id="expected-behavior23"><a class="anchor hidden-xs" href="#expected-behavior23" title="expected-behavior23"><span class="octicon octicon-link"></span></a>Expected Behavior</h4><ul>
+<li>All contacts should be listed in Rolodex</li>
+</ul><h2 id="new-rolodex-command"><a class="anchor hidden-xs" href="#new-rolodex-command" title="new-rolodex-command"><span class="octicon octicon-link"></span></a>New Rolodex Command</h2><h3 id="creating-new-rolodex-at-relative-directory"><a class="anchor hidden-xs" href="#creating-new-rolodex-at-relative-directory" title="creating-new-rolodex-at-relative-directory"><span class="octicon octicon-link"></span></a>Creating New Rolodex at Relative Directory</h3><ol>
+<li>Type <code>new data/SampleData2.rldx</code> or <code>n data/SampleData2.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour35"><a class="anchor hidden-xs" href="#expected-behaviour35" title="expected-behaviour35"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>A new Rolodex is created under the relative directory (data folder should be in same place as .jar file).</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. the data file you are currently operating on)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="creating-new-rolodex-at-system-directory"><a class="anchor hidden-xs" href="#creating-new-rolodex-at-system-directory" title="creating-new-rolodex-at-system-directory"><span class="octicon octicon-link"></span></a>Creating New Rolodex at System Directory</h3><h4 id="windows"><a class="anchor hidden-xs" href="#windows" title="windows"><span class="octicon octicon-link"></span></a>Windows:</h4><ol>
+<li>Type <code>new C:/Users/YOUR_USERNAME/Desktop/SampleData.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="mac"><a class="anchor hidden-xs" href="#mac" title="mac"><span class="octicon octicon-link"></span></a>Mac:</h4><ol>
+<li>Type <code>new /Users/YOUR_USERNAME/Desktop/SampleData.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="linux"><a class="anchor hidden-xs" href="#linux" title="linux"><span class="octicon octicon-link"></span></a>Linux:</h4><ol>
+<li>Type <code>new /home/YOUR_USERNAME/Desktop/SampleData.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour36"><a class="anchor hidden-xs" href="#expected-behaviour36" title="expected-behaviour36"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>A new test file, <code>SampleData.rldx</code> should be created on your desktop.</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. the data file you are currently operating on)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="attempting-to-re-create-existing-rolodex"><a class="anchor hidden-xs" href="#attempting-to-re-create-existing-rolodex" title="attempting-to-re-create-existing-rolodex"><span class="octicon octicon-link"></span></a>Attempting to Re-Create Existing Rolodex</h3><ol>
+<li>Type <code>new data/SampleData.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour37"><a class="anchor hidden-xs" href="#expected-behaviour37" title="expected-behaviour37"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>An error message should be displayed, prompting to use the <code>open</code> command instead.</li>
+<li>The original SampleData.rldx should not be overwritten or changed.</li>
+</ul><h3 id="auto-completion6"><a class="anchor hidden-xs" href="#auto-completion6" title="auto-completion6"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>new</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type<code>data/SampleData3.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour38"><a class="anchor hidden-xs" href="#expected-behaviour38" title="expected-behaviour38"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>A new Rolodex is created under the relative directory (data folder should be in same place as .jar file).</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. <code>data/SampleData3.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="invalid-command-suggestion9"><a class="anchor hidden-xs" href="#invalid-command-suggestion9" title="invalid-command-suggestion9"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>new:( data/SampleData4</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean new data/SampleData3.rldx?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour39"><a class="anchor hidden-xs" href="#expected-behaviour39" title="expected-behaviour39"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>A new Rolodex is created under the relative directory (data folder should be in same place as .jar file).</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. <code>data/SampleData4.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="keyboard-shortcut8"><a class="anchor hidden-xs" href="#keyboard-shortcut8" title="keyboard-shortcut8"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>N</code></li>
+<li>Type<code>data/SampleData5.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour40"><a class="anchor hidden-xs" href="#expected-behaviour40" title="expected-behaviour40"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>A new Rolodex is created under the relative directory (data folder should be in same place as .jar file).</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. <code>data/SampleData5.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h2 id="open-rolodex-command"><a class="anchor hidden-xs" href="#open-rolodex-command" title="open-rolodex-command"><span class="octicon octicon-link"></span></a>Open Rolodex Command</h2><h3 id="requirements"><a class="anchor hidden-xs" href="#requirements" title="requirements"><span class="octicon octicon-link"></span></a>Requirements</h3><ol>
+<li>Please complete the section <a href="#New-Rolodex-Command">New Rolodex Command</a> before proceeding with this section.</li>
+</ol><h3 id="opening-rolodex-at-relative-directory"><a class="anchor hidden-xs" href="#opening-rolodex-at-relative-directory" title="opening-rolodex-at-relative-directory"><span class="octicon octicon-link"></span></a>Opening Rolodex at Relative Directory</h3><ol>
+<li>Type <code>open data/SampleData2.rldx</code> or <code>o data/SampleData2.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour41"><a class="anchor hidden-xs" href="#expected-behaviour41" title="expected-behaviour41"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The original Rolodex under the relative directory (data folder should be in same place as .jar file) is opened.</li>
+<li>The status bar on the bottom right of the application updates to the opened Rolodex (i.e. <code>data/SampleData2.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="opening-rolodex-at-system-directory"><a class="anchor hidden-xs" href="#opening-rolodex-at-system-directory" title="opening-rolodex-at-system-directory"><span class="octicon octicon-link"></span></a>Opening Rolodex at System Directory</h3><h4 id="windows1"><a class="anchor hidden-xs" href="#windows1" title="windows1"><span class="octicon octicon-link"></span></a>Windows:</h4><ol>
+<li>Type <code>open C:/Users/YOUR_USERNAME/Desktop/SampleData3.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="mac1"><a class="anchor hidden-xs" href="#mac1" title="mac1"><span class="octicon octicon-link"></span></a>Mac:</h4><ol>
+<li>Type <code>open /Users/YOUR_USERNAME/Desktop/SampleData3.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="linux1"><a class="anchor hidden-xs" href="#linux1" title="linux1"><span class="octicon octicon-link"></span></a>Linux:</h4><ol>
+<li>Type <code>open /home/YOUR_USERNAME/Desktop/SampleData3.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour42"><a class="anchor hidden-xs" href="#expected-behaviour42" title="expected-behaviour42"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The original test file, <code>SampleData.rldx</code> should be loaded onto your application.</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. <code>data/SampleData.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="attempting-to-open-non-existent-rolodex"><a class="anchor hidden-xs" href="#attempting-to-open-non-existent-rolodex" title="attempting-to-open-non-existent-rolodex"><span class="octicon octicon-link"></span></a>Attempting to Open Non-Existent Rolodex</h3><ol>
+<li>Type <code>open data/SampleData4.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour43"><a class="anchor hidden-xs" href="#expected-behaviour43" title="expected-behaviour43"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>An error message should be displayed, prompting to use the <code>new</code> command instead.</li>
+<li>The original SampleData.rldx should not be overwritten or changed.</li>
+</ul><h3 id="auto-completion7"><a class="anchor hidden-xs" href="#auto-completion7" title="auto-completion7"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>open</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>data/SampleData.rldx</code></li>
+</ol><h4 id="expected-behaviour44"><a class="anchor hidden-xs" href="#expected-behaviour44" title="expected-behaviour44"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The original Rolodex under the relative directory (data folder should be in same place as .jar file) is opened.</li>
+<li>The status bar on the bottom right of the application updates to the opened Rolodex (i.e. <code>data/SampleData.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="invalid-command-suggestion10"><a class="anchor hidden-xs" href="#invalid-command-suggestion10" title="invalid-command-suggestion10"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>open:) data/SampleData2</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean open data/SampleData2.rldx?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour45"><a class="anchor hidden-xs" href="#expected-behaviour45" title="expected-behaviour45"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The Rolodex under the relative directory (data folder should be in same place as .jar file).</li>
+<li>The status bar on the bottom right of the application updates to the new Rolodex (i.e. <code>data/SampleData2.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h3 id="keyboard-shortcut9"><a class="anchor hidden-xs" href="#keyboard-shortcut9" title="keyboard-shortcut9"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>O</code></li>
+<li>Type <code>data/SampleData.rldx</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour46"><a class="anchor hidden-xs" href="#expected-behaviour46" title="expected-behaviour46"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The original Rolodex under the relative directory (data folder should be in same place as .jar file) is opened.</li>
+<li>The status bar on the bottom right of the application updates to the opened Rolodex (i.e. <code>data/SampleData.rldx</code>)</li>
+<li>Undo/Redo no longer works as new data has been inserted and stack has been cleared.</li>
+</ul><h2 id="remark-command"><a class="anchor hidden-xs" href="#remark-command" title="remark-command"><span class="octicon octicon-link"></span></a>Remark Command</h2><h3 id="basic-functionality8"><a class="anchor hidden-xs" href="#basic-functionality8" title="basic-functionality8"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>remark 1 r/Loves to talk.</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour47"><a class="anchor hidden-xs" href="#expected-behaviour47" title="expected-behaviour47"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to talk.”</li>
+</ul><h3 id="abbreviations5"><a class="anchor hidden-xs" href="#abbreviations5" title="abbreviations5"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>rmk 3 r/Loves to sing.</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 3</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour48"><a class="anchor hidden-xs" href="#expected-behaviour48" title="expected-behaviour48"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to sing.”</li>
+</ul><hr><ol>
+<li>Type <code>comment 3 r/Loves to jump.</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 3</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour49"><a class="anchor hidden-xs" href="#expected-behaviour49" title="expected-behaviour49"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to jump.”</li>
+</ul><hr><ol>
+<li>Type <code>note 3 r/Loves to eat.</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 3</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour50"><a class="anchor hidden-xs" href="#expected-behaviour50" title="expected-behaviour50"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to eat.”</li>
+</ul><h3 id="auto-completion8"><a class="anchor hidden-xs" href="#auto-completion8" title="auto-completion8"><span class="octicon octicon-link"></span></a>Auto-completion</h3><ol>
+<li>Type <code>remark</code> and press <code>Tab</code></li>
+<li>Type <code>1</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>Loves to swim</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour51"><a class="anchor hidden-xs" href="#expected-behaviour51" title="expected-behaviour51"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to swim.”</li>
+</ul><h3 id="keyboard-shortcut10"><a class="anchor hidden-xs" href="#keyboard-shortcut10" title="keyboard-shortcut10"><span class="octicon octicon-link"></span></a>Keyboard shortcut</h3><ol>
+<li>Press <code>Ctrl</code> + <code>R</code></li>
+<li>Type <code>1</code></li>
+<li>Press <code>Tab</code></li>
+<li>Type <code>Loves to dance</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>select 1</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour52"><a class="anchor hidden-xs" href="#expected-behaviour52" title="expected-behaviour52"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Loves to dance.”</li>
+</ul><h3 id="invalid-command-suggestion11"><a class="anchor hidden-xs" href="#invalid-command-suggestion11" title="invalid-command-suggestion11"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>rmk1 Hates dancing</code></li>
+<li>Press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean rmk 1 r/Hates dancing?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour53"><a class="anchor hidden-xs" href="#expected-behaviour53" title="expected-behaviour53"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The selected contact should have the remark “Hates dancing”</li>
+</ul><h2 id="undo-command"><a class="anchor hidden-xs" href="#undo-command" title="undo-command"><span class="octicon octicon-link"></span></a>Undo Command</h2><h3 id="basic-functionality9"><a class="anchor hidden-xs" href="#basic-functionality9" title="basic-functionality9"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>delete 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour54"><a class="anchor hidden-xs" href="#expected-behaviour54" title="expected-behaviour54"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should remain in Rolodex</li>
+</ul><h3 id="abbreviations6"><a class="anchor hidden-xs" href="#abbreviations6" title="abbreviations6"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour55"><a class="anchor hidden-xs" href="#expected-behaviour55" title="expected-behaviour55"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should remain in Rolodex</li>
+</ul><h3 id="drop-down-list3"><a class="anchor hidden-xs" href="#drop-down-list3" title="drop-down-list3"><span class="octicon octicon-link"></span></a>Drop-Down List</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>u</code></li>
+<li>Press <code>↓</code> until the <code>undo</code> option is highlighted in the drop-down list</li>
+<li>Press <code>Enter</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour56"><a class="anchor hidden-xs" href="#expected-behaviour56" title="expected-behaviour56"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should remain in Rolodex</li>
+</ul><h3 id="invalid-command-suggestion12"><a class="anchor hidden-xs" href="#invalid-command-suggestion12" title="invalid-command-suggestion12"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>udon YUMMY!!! :P</code> and press <code>Enter</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean undo?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour57"><a class="anchor hidden-xs" href="#expected-behaviour57" title="expected-behaviour57"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should remain in Rolodex</li>
+</ul><h3 id="keyboard-shortcut11"><a class="anchor hidden-xs" href="#keyboard-shortcut11" title="keyboard-shortcut11"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Press <code>Ctrl</code> + <code>Z</code></li>
+</ol><h4 id="expected-behaviour58"><a class="anchor hidden-xs" href="#expected-behaviour58" title="expected-behaviour58"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should remain in Rolodex</li>
+</ul><h2 id="redo-command"><a class="anchor hidden-xs" href="#redo-command" title="redo-command"><span class="octicon octicon-link"></span></a>Redo Command</h2><h3 id="basic-functionality10"><a class="anchor hidden-xs" href="#basic-functionality10" title="basic-functionality10"><span class="octicon octicon-link"></span></a>Basic functionality</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code> and press <code>Enter</code></li>
+<li>Type <code>redo</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour59"><a class="anchor hidden-xs" href="#expected-behaviour59" title="expected-behaviour59"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be deleted from Rolodex</li>
+</ul><h3 id="abbreviations7"><a class="anchor hidden-xs" href="#abbreviations7" title="abbreviations7"><span class="octicon octicon-link"></span></a>Abbreviations</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code> and press <code>Enter</code></li>
+<li>Type <code>r</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour60"><a class="anchor hidden-xs" href="#expected-behaviour60" title="expected-behaviour60"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be deleted from Rolodex</li>
+</ul><h3 id="drop-down-list4"><a class="anchor hidden-xs" href="#drop-down-list4" title="drop-down-list4"><span class="octicon octicon-link"></span></a>Drop-Down List</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code> and press <code>Enter</code></li>
+<li>Type <code>r</code></li>
+<li>Press <code>↓</code> until the <code>redo</code> option is highlighted in the drop-down list</li>
+<li>Press <code>Enter</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour61"><a class="anchor hidden-xs" href="#expected-behaviour61" title="expected-behaviour61"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be deleted from Rolodex</li>
+</ul><h3 id="invalid-command-suggestion13"><a class="anchor hidden-xs" href="#invalid-command-suggestion13" title="invalid-command-suggestion13"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code> and press <code>Enter</code></li>
+<li>Type <code>redp</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour62"><a class="anchor hidden-xs" href="#expected-behaviour62" title="expected-behaviour62"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be deleted from Rolodex</li>
+</ul><h3 id="keyboard-shortcut12"><a class="anchor hidden-xs" href="#keyboard-shortcut12" title="keyboard-shortcut12"><span class="octicon octicon-link"></span></a>Keyboard Shortcut</h3><ol>
+<li>Type <code>d 1</code> and press <code>Enter</code></li>
+<li>Type <code>undo</code> and press <code>Enter</code></li>
+<li>Press <code>Ctrl</code> + <code>Y</code></li>
+</ol><h4 id="expected-behaviour63"><a class="anchor hidden-xs" href="#expected-behaviour63" title="expected-behaviour63"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The first contact should be deleted from Rolodex</li>
+</ul><h2 id="exit-command"><a class="anchor hidden-xs" href="#exit-command" title="exit-command"><span class="octicon octicon-link"></span></a>Exit Command</h2><ol>
+<li>Type <code>exit</code> or <code>quit</code> or <code>close</code> or <code>bye</code> or <code>esc</code></li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour64"><a class="anchor hidden-xs" href="#expected-behaviour64" title="expected-behaviour64"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The application should be closed.</li>
+</ul><h3 id="invalid-command-suggestion14"><a class="anchor hidden-xs" href="#invalid-command-suggestion14" title="invalid-command-suggestion14"><span class="octicon octicon-link"></span></a>Invalid Command Suggestion</h3><ol>
+<li>Reopen the application by clicking the rolodex.jar file.</li>
+<li>Type <code>exito</code></li>
+<li>Type <code>y</code> or <code>yes</code> or <code>k</code> or <code>ok</code> or <code>yea</code> or <code>yeah</code> when prompted ‘Did you mean exit?’</li>
+<li>Press <code>Enter</code></li>
+</ol><h4 id="expected-behaviour65"><a class="anchor hidden-xs" href="#expected-behaviour65" title="expected-behaviour65"><span class="octicon octicon-link"></span></a>Expected Behaviour</h4><ul>
+<li>The application should be closed.</li>
+</ul><h2 id="end"><a class="anchor hidden-xs" href="#end" title="end"><span class="octicon octicon-link"></span></a>End</h2><p>Congratulations. You have reached the end of the tests. Found any bugs? Report it at <a href="https://github.com/CS2103AUG2017-W11-B2/main/issues" target="_blank">https://github.com/CS2103AUG2017-W11-B2/main/issues</a>. We’ll give you a cookie for finding bugs! :)</p><h2 id="bonus-star-wars-ep-iv"><a class="anchor hidden-xs" href="#bonus-star-wars-ep-iv" title="bonus-star-wars-ep-iv"><span class="octicon octicon-link"></span></a>Bonus: Star Wars Ep IV</h2><h3 id="requirements1"><a class="anchor hidden-xs" href="#requirements1" title="requirements1"><span class="octicon octicon-link"></span></a>Requirements</h3><p>Make sure you are connected to the internet and are <strong>on a network that has port 25 open</strong>. Chances are many universities’s (ahem) networks block the incoming port and this won’t work. Solution? Use a tether. Trust us - it’s awesome!</p><h3 id="basic-functionality11"><a class="anchor hidden-xs" href="#basic-functionality11" title="basic-functionality11"><span class="octicon octicon-link"></span></a>Basic Functionality</h3><ol>
+<li>Type <code>starwars</code> or <code>sw</code></li>
+<li>Press <code>Enter</code>.</li>
+<li>Enjoy!</li>
+</ol><div class="resize-sensor" style="position: absolute; left: 0px; top: 0px; right: 0px; bottom: 0px; overflow: hidden; z-index: -1; visibility: hidden;"><div class="resize-sensor-expand" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0px; top: 0px; transition: 0s; width: 100000px; height: 100000px;"></div></div><div class="resize-sensor-shrink" style="position: absolute; left: 0; top: 0; right: 0; bottom: 0; overflow: hidden; z-index: -1; visibility: hidden;"><div style="position: absolute; left: 0; top: 0; transition: 0s; width: 200%; height: 200%"></div></div></div></div>
+    <div class="ui-toc dropup unselectable hidden-print" style="display:none;">
+        <div class="pull-right dropdown">
+            <a id="tocLabel" class="ui-toc-label btn btn-default" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false" title="Table of content">
+                <i class="fa fa-bars"></i>
+            </a>
+            <ul id="ui-toc" class="ui-toc-dropdown dropdown-menu" aria-labelledby="tocLabel">
+                <div class="toc"><ul class="nav"><li class=""><a href="#rolodex-test-script">Rolodex - Test Script</a><ul class="nav"><li class=""><a href="#setting-up">Setting Up</a></li><li><a href="#add-command">Add Command</a><ul class="nav"><li><a href="#basic-functionality">Basic Functionality</a></li><li><a href="#abbreviations">Abbreviations</a></li><li><a href="#drop-down-list">Drop-down List</a></li><li><a href="#auto-completion">Auto-completion</a></li><li><a href="#invalid-command-suggestion">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut">Keyboard Shortcut</a></li></ul></li><li><a href="#delete-command">Delete Command</a><ul class="nav"><li><a href="#basic-functionality1">Basic Functionality</a></li><li><a href="#abbreviations1">Abbreviations</a></li><li><a href="#auto-completion1">Auto-completion</a></li><li><a href="#invalid-command-suggestion1">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut1">Keyboard Shortcut</a></li></ul></li><li><a href="#edit-command">Edit Command</a><ul class="nav"><li><a href="#basic-functionality2">Basic Functionality</a></li><li><a href="#tag-toggling">Tag Toggling</a></li><li><a href="#abbreviations2">Abbreviations</a></li><li><a href="#drop-down-list1">Drop-down List</a></li><li><a href="#auto-completion2">Auto-completion</a></li><li><a href="#invalid-command-suggestion2">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut2">Keyboard Shortcut</a></li></ul></li><li><a href="#select-command">Select Command</a><ul class="nav"><li><a href="#basic-functionality3">Basic Functionality</a></li><li><a href="#abbreviations3">Abbreviations</a></li><li><a href="#drop-down-list2">Drop-Down List</a></li><li><a href="#auto-completion3">Auto-completion</a></li><li><a href="#invalid-command-suggestion3">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut3">Keyboard Shortcut</a></li></ul></li><li><a href="#email-command">Email Command</a><ul class="nav"><li><a href="#basic-functionality4">Basic functionality</a></li><li><a href="#auto-completion4">Auto-completion</a></li><li><a href="#invalid-command-suggestion4">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut4">Keyboard Shortcut</a></li></ul></li><li><a href="#find-command">Find Command</a><ul class="nav"><li><a href="#find-by-name">Find by name</a></li><li><a href="#find-by-tag">Find by tag</a></li><li><a href="#sorting">Sorting</a></li><li><a href="#auto-completion5">Auto-completion</a></li><li><a href="#keyboard-shortcut5">Keyboard Shortcut</a></li><li><a href="#invalid-command-suggestion5">Invalid Command Suggestion</a></li></ul></li><li><a href="#help-command">Help Command</a><ul class="nav"><li><a href="#basic-functionality5">Basic Functionality</a></li><li><a href="#help-window-searching">Help Window Searching</a></li><li><a href="#invalid-command-suggestion6">Invalid Command Suggestion</a></li></ul></li><li><a href="#history-command">History Command</a><ul class="nav"><li><a href="#basic-functionality6">Basic Functionality</a></li><li><a href="#invalid-command-suggestion7">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut6">Keyboard Shortcut</a></li></ul></li><li><a href="#list-command">List Command</a><ul class="nav"><li><a href="#basic-functionality7">Basic Functionality</a></li><li><a href="#abbreviations4">Abbreviations</a></li><li><a href="#sorting1">Sorting</a></li><li><a href="#invalid-command-suggestion8">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut7">Keyboard Shortcut</a></li></ul></li><li><a href="#new-rolodex-command">New Rolodex Command</a><ul class="nav"><li><a href="#creating-new-rolodex-at-relative-directory">Creating New Rolodex at Relative Directory</a></li><li><a href="#creating-new-rolodex-at-system-directory">Creating New Rolodex at System Directory</a></li><li><a href="#attempting-to-re-create-existing-rolodex">Attempting to Re-Create Existing Rolodex</a></li><li><a href="#auto-completion6">Auto-completion</a></li><li><a href="#invalid-command-suggestion9">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut8">Keyboard Shortcut</a></li></ul></li><li><a href="#open-rolodex-command">Open Rolodex Command</a><ul class="nav"><li><a href="#requirements">Requirements</a></li><li><a href="#opening-rolodex-at-relative-directory">Opening Rolodex at Relative Directory</a></li><li><a href="#opening-rolodex-at-system-directory">Opening Rolodex at System Directory</a></li><li><a href="#attempting-to-open-non-existent-rolodex">Attempting to Open Non-Existent Rolodex</a></li><li><a href="#auto-completion7">Auto-completion</a></li><li><a href="#invalid-command-suggestion10">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut9">Keyboard Shortcut</a></li></ul></li><li><a href="#remark-command">Remark Command</a><ul class="nav"><li><a href="#basic-functionality8">Basic Functionality</a></li><li><a href="#abbreviations5">Abbreviations</a></li><li><a href="#auto-completion8">Auto-completion</a></li><li><a href="#keyboard-shortcut10">Keyboard shortcut</a></li><li><a href="#invalid-command-suggestion11">Invalid Command Suggestion</a></li></ul></li><li><a href="#undo-command">Undo Command</a><ul class="nav"><li><a href="#basic-functionality9">Basic Functionality</a></li><li><a href="#abbreviations6">Abbreviations</a></li><li><a href="#drop-down-list3">Drop-Down List</a></li><li><a href="#invalid-command-suggestion12">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut11">Keyboard Shortcut</a></li></ul></li><li><a href="#redo-command">Redo Command</a><ul class="nav"><li><a href="#basic-functionality10">Basic functionality</a></li><li><a href="#abbreviations7">Abbreviations</a></li><li><a href="#drop-down-list4">Drop-Down List</a></li><li><a href="#invalid-command-suggestion13">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut12">Keyboard Shortcut</a></li></ul></li><li><a href="#exit-command">Exit Command</a><ul class="nav"><li><a href="#invalid-command-suggestion14">Invalid Command Suggestion</a></li></ul></li><li><a href="#end">End</a></li><li><a href="#bonus-star-wars-ep-iv">Bonus: Star Wars Ep IV</a><ul class="nav"><li><a href="#requirements1">Requirements</a></li><li><a href="#basic-functionality11">Basic Functionality</a></li></ul></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+            </ul>
+        </div>
+    </div>
+    <div id="ui-toc-affix" class="ui-affix-toc ui-toc-dropdown unselectable hidden-print" data-spy="affix" style="top:17px;display:none;"  >
+        <div class="toc"><ul class="nav"><li class=""><a href="#rolodex-test-script">Rolodex - Test Script</a><ul class="nav"><li class=""><a href="#setting-up">Setting Up</a></li><li><a href="#add-command">Add Command</a><ul class="nav"><li><a href="#basic-functionality">Basic Functionality</a></li><li><a href="#abbreviations">Abbreviations</a></li><li><a href="#drop-down-list">Drop-down List</a></li><li><a href="#auto-completion">Auto-completion</a></li><li><a href="#invalid-command-suggestion">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut">Keyboard Shortcut</a></li></ul></li><li><a href="#delete-command">Delete Command</a><ul class="nav"><li><a href="#basic-functionality1">Basic Functionality</a></li><li><a href="#abbreviations1">Abbreviations</a></li><li><a href="#auto-completion1">Auto-completion</a></li><li><a href="#invalid-command-suggestion1">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut1">Keyboard Shortcut</a></li></ul></li><li><a href="#edit-command">Edit Command</a><ul class="nav"><li><a href="#basic-functionality2">Basic Functionality</a></li><li><a href="#tag-toggling">Tag Toggling</a></li><li><a href="#abbreviations2">Abbreviations</a></li><li><a href="#drop-down-list1">Drop-down List</a></li><li><a href="#auto-completion2">Auto-completion</a></li><li><a href="#invalid-command-suggestion2">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut2">Keyboard Shortcut</a></li></ul></li><li><a href="#select-command">Select Command</a><ul class="nav"><li><a href="#basic-functionality3">Basic Functionality</a></li><li><a href="#abbreviations3">Abbreviations</a></li><li><a href="#drop-down-list2">Drop-Down List</a></li><li><a href="#auto-completion3">Auto-completion</a></li><li><a href="#invalid-command-suggestion3">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut3">Keyboard Shortcut</a></li></ul></li><li><a href="#email-command">Email Command</a><ul class="nav"><li><a href="#basic-functionality4">Basic functionality</a></li><li><a href="#auto-completion4">Auto-completion</a></li><li><a href="#invalid-command-suggestion4">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut4">Keyboard Shortcut</a></li></ul></li><li><a href="#find-command">Find Command</a><ul class="nav"><li><a href="#find-by-name">Find by name</a></li><li><a href="#find-by-tag">Find by tag</a></li><li><a href="#sorting">Sorting</a></li><li><a href="#auto-completion5">Auto-completion</a></li><li><a href="#keyboard-shortcut5">Keyboard Shortcut</a></li><li><a href="#invalid-command-suggestion5">Invalid Command Suggestion</a></li></ul></li><li><a href="#help-command">Help Command</a><ul class="nav"><li><a href="#basic-functionality5">Basic Functionality</a></li><li><a href="#help-window-searching">Help Window Searching</a></li><li><a href="#invalid-command-suggestion6">Invalid Command Suggestion</a></li></ul></li><li><a href="#history-command">History Command</a><ul class="nav"><li><a href="#basic-functionality6">Basic Functionality</a></li><li><a href="#invalid-command-suggestion7">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut6">Keyboard Shortcut</a></li></ul></li><li><a href="#list-command">List Command</a><ul class="nav"><li><a href="#basic-functionality7">Basic Functionality</a></li><li><a href="#abbreviations4">Abbreviations</a></li><li><a href="#sorting1">Sorting</a></li><li><a href="#invalid-command-suggestion8">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut7">Keyboard Shortcut</a></li></ul></li><li><a href="#new-rolodex-command">New Rolodex Command</a><ul class="nav"><li><a href="#creating-new-rolodex-at-relative-directory">Creating New Rolodex at Relative Directory</a></li><li><a href="#creating-new-rolodex-at-system-directory">Creating New Rolodex at System Directory</a></li><li><a href="#attempting-to-re-create-existing-rolodex">Attempting to Re-Create Existing Rolodex</a></li><li><a href="#auto-completion6">Auto-completion</a></li><li><a href="#invalid-command-suggestion9">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut8">Keyboard Shortcut</a></li></ul></li><li><a href="#open-rolodex-command">Open Rolodex Command</a><ul class="nav"><li><a href="#requirements">Requirements</a></li><li><a href="#opening-rolodex-at-relative-directory">Opening Rolodex at Relative Directory</a></li><li><a href="#opening-rolodex-at-system-directory">Opening Rolodex at System Directory</a></li><li><a href="#attempting-to-open-non-existent-rolodex">Attempting to Open Non-Existent Rolodex</a></li><li><a href="#auto-completion7">Auto-completion</a></li><li><a href="#invalid-command-suggestion10">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut9">Keyboard Shortcut</a></li></ul></li><li><a href="#remark-command">Remark Command</a><ul class="nav"><li><a href="#basic-functionality8">Basic Functionality</a></li><li><a href="#abbreviations5">Abbreviations</a></li><li><a href="#auto-completion8">Auto-completion</a></li><li><a href="#keyboard-shortcut10">Keyboard shortcut</a></li><li><a href="#invalid-command-suggestion11">Invalid Command Suggestion</a></li></ul></li><li><a href="#undo-command">Undo Command</a><ul class="nav"><li><a href="#basic-functionality9">Basic Functionality</a></li><li><a href="#abbreviations6">Abbreviations</a></li><li><a href="#drop-down-list3">Drop-Down List</a></li><li><a href="#invalid-command-suggestion12">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut11">Keyboard Shortcut</a></li></ul></li><li><a href="#redo-command">Redo Command</a><ul class="nav"><li><a href="#basic-functionality10">Basic functionality</a></li><li><a href="#abbreviations7">Abbreviations</a></li><li><a href="#drop-down-list4">Drop-Down List</a></li><li><a href="#invalid-command-suggestion13">Invalid Command Suggestion</a></li><li><a href="#keyboard-shortcut12">Keyboard Shortcut</a></li></ul></li><li><a href="#exit-command">Exit Command</a><ul class="nav"><li><a href="#invalid-command-suggestion14">Invalid Command Suggestion</a></li></ul></li><li><a href="#end">End</a></li><li><a href="#bonus-star-wars-ep-iv">Bonus: Star Wars Ep IV</a><ul class="nav"><li><a href="#requirements1">Requirements</a></li><li><a href="#basic-functionality11">Basic Functionality</a></li></ul></li></ul></li></ul></div><div class="toc-menu"><a class="expand-toggle" href="#">Expand all</a><a class="back-to-top" href="#">Back to top</a><a class="go-to-bottom" href="#">Go to bottom</a></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha256-U5ZEeKfGNOja007MMD3YBI0A3OSZOQbeG6z2f2Y0hu8=" crossorigin="anonymous" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gist-embed/2.6.0/gist-embed.min.js" integrity="sha256-KyF2D6xPIJUW5sUDSs93vWyZm+1RzIpKCexxElmxl8g=" crossorigin="anonymous" defer></script>
+    <script>
+        var markdown = $(".markdown-body");
+        //smooth all hash trigger scrolling
+        function smoothHashScroll() {
+            var hashElements = $("a[href^='#']").toArray();
+            for (var i = 0; i < hashElements.length; i++) {
+                var element = hashElements[i];
+                var $element = $(element);
+                var hash = element.hash;
+                if (hash) {
+                    $element.on('click', function (e) {
+                        // store hash
+                        var hash = this.hash;
+                        if ($(hash).length <= 0) return;
+                        // prevent default anchor click behavior
+                        e.preventDefault();
+                        // animate
+                        $('body, html').stop(true, true).animate({
+                            scrollTop: $(hash).offset().top
+                        }, 100, "linear", function () {
+                            // when done, add hash to url
+                            // (default click behaviour)
+                            window.location.hash = hash;
+                        });
+                    });
+                }
+            }
+        }
+
+        smoothHashScroll();
+        var toc = $('.ui-toc');
+        var tocAffix = $('.ui-affix-toc');
+        var tocDropdown = $('.ui-toc-dropdown');
+        //toc
+        tocDropdown.click(function (e) {
+            e.stopPropagation();
+        });
+
+        var enoughForAffixToc = true;
+
+        function generateScrollspy() {
+            $(document.body).scrollspy({
+                target: ''
+            });
+            $(document.body).scrollspy('refresh');
+            if (enoughForAffixToc) {
+                toc.hide();
+                tocAffix.show();
+            } else {
+                tocAffix.hide();
+                toc.show();
+            }
+            $(document.body).scroll();
+        }
+
+        function windowResize() {
+            //toc right
+            var paddingRight = parseFloat(markdown.css('padding-right'));
+            var right = ($(window).width() - (markdown.offset().left + markdown.outerWidth() - paddingRight));
+            toc.css('right', right + 'px');
+            //affix toc left
+            var newbool;
+            var rightMargin = (markdown.parent().outerWidth() - markdown.outerWidth()) / 2;
+            //for ipad or wider device
+            if (rightMargin >= 133) {
+                newbool = true;
+                var affixLeftMargin = (tocAffix.outerWidth() - tocAffix.width()) / 2;
+                var left = markdown.offset().left + markdown.outerWidth() - affixLeftMargin;
+                tocAffix.css('left', left + 'px');
+            } else {
+                newbool = false;
+            }
+            if (newbool != enoughForAffixToc) {
+                enoughForAffixToc = newbool;
+                generateScrollspy();
+            }
+        }
+        $(window).resize(function () {
+            windowResize();
+        });
+        $(document).ready(function () {
+            windowResize();
+            generateScrollspy();
+        });
+
+        //remove hash
+        function removeHash() {
+            window.location.hash = '';
+        }
+
+        var backtotop = $('.back-to-top');
+        var gotobottom = $('.go-to-bottom');
+
+        backtotop.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToTop)
+                scrollToTop();
+            removeHash();
+        });
+        gotobottom.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            if (scrollToBottom)
+                scrollToBottom();
+            removeHash();
+        });
+
+        var toggle = $('.expand-toggle');
+        var tocExpand = false;
+
+        checkExpandToggle();
+        toggle.click(function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            tocExpand = !tocExpand;
+            checkExpandToggle();
+        })
+
+        function checkExpandToggle () {
+            var toc = $('.ui-toc-dropdown .toc');
+            var toggle = $('.expand-toggle');
+            if (!tocExpand) {
+                toc.removeClass('expand');
+                toggle.text('Expand all');
+            } else {
+                toc.addClass('expand');
+                toggle.text('Collapse all');
+            }
+        }
+
+        function scrollToTop() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: 0
+            }, 100, "linear");
+        }
+
+        function scrollToBottom() {
+            $('body, html').stop(true, true).animate({
+                scrollTop: $(document.body)[0].scrollHeight
+            }, 100, "linear");
+        }
+    </script>
+</body>
+
+</html>
